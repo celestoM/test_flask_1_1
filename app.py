@@ -6,9 +6,9 @@ app = Flask(__name__)
 def init():
     return {"payload":"welcome to my project3"}
 
-@app.route("/read/:<content>", methods=["GET"])
+@app.route("/init/:<content>", methods=["GET"])
 def read(content):
-    if content=="foo":
+    if content=="alfa":
         return {"payload":content}
     else:
         return "No Existe" 
