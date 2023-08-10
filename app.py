@@ -10,9 +10,13 @@ def inicio():
 def read(content):
     return {"payload":content}
 
+@app.route("/create/:<content>", methods=["POST"])
+def create(content):
+    return {"payload":content}
+
 @app.route("/init/:<content>", methods=["GET"])
 def init(content):
-    if content=="alfa":
+    if content=="echo":
         return {"payload":content}
     else:
         return "No Existe" 
